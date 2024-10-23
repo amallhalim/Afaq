@@ -1,5 +1,5 @@
 const theme = {
-  token: {
+  palette: {
    primary: {
       main: "#3EC5FA",
       babyBlue: "#8AD8FA",         

@@ -18,8 +18,8 @@ function App() {
             <Button
       type="primary"
       style={{
-        backgroundColor: theme.token.primary.main, // Use colorPrimary from theme
-        borderRadius: theme.token.borderRadius,    // Use borderRadius from theme
+        backgroundColor: theme.palette.primary.main, // Use colorPrimary from theme
+        borderRadius: theme.palette.borderRadius,    // Use borderRadius from theme
       }}
     >
       Custom Themed Button
