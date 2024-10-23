@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Cascader, Select, message } from "antd";
+import { Cascader, Select, Space, message, Card, Typography, Divider, DatePicker } from "antd";
 import { Option } from "antd/es/mentions";
 import { db } from "../../configuration/firebase"; // Import your Firebase config
 import { collection, addDoc } from "firebase/firestore"; // Firestore methods
+
+const { RangePicker } = DatePicker;
 
 export default function Home() {
   const [selectedUser, setSelectedUser] = useState("");
@@ -17,7 +19,7 @@ export default function Home() {
       });
       message.success(`User ${userName} saved to Firestore!`);
     } catch (error) {
-      console.log("🚀 ~ saveUserToFirestore ~ error:", error)
+      console.log("🚀 ~ saveUserToFirestore ~ error:", error);
       message.error("Error saving user to Firestore: " + error.message);
     }
   };
@@ -29,19 +31,36 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <Select
-        showSearch
-        style={{ width: 200 }}
-        placeholder="Select a user"
-        onChange={handleSelectChange}
-        value={selectedUser}
-      >
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-      </Select>
+    <div style={{ padding: "20px" }}>
+      <Card title="User Information" bordered={false} style={{ width: 400 }}>
+        <Typography.Title level={4}>Select a User</Typography.Title>
+        <Select
+          showSearch
+          style={{ width: "100%", marginBottom: "20px" }}
+          placeholder="Select a user"
+          onChange={handleSelectChange}
+          value={selectedUser}
+        >
+          <Option value="jack">Jack</Option>
+          <Option value="lucy">Lucy</Option>
+        </Select>
 
-      <Cascader placeholder="Search" placement="bottomLeft" />
+        <Divider />
+
+        <Typography.Title level={4}>Cascader Example</Typography.Title>
+        <Cascader placeholder="Search Options" style={{ width: "100%", marginBottom: "20px" }} />
+
+        <Divider />
+
+        <Typography.Title level={4}>Select Date & Time</Typography.Title>
+        <Space direction="vertical" size={12} style={{ width: "100%" }}>
+          <DatePicker renderExtraFooter={() => "Select Date"} style={{ width: "100%" }} />
+          <DatePicker renderExtraFooter={() => "Select Date & Time"} showTime style={{ width: "100%" }} />
+          <RangePicker renderExtraFooter={() => "Select Date Range"} style={{ width: "100%" }} />
+          <RangePicker renderExtraFooter={() => "Select Date & Time Range"} showTime style={{ width: "100%" }} />
+          <DatePicker renderExtraFooter={() => "Select Month"} picker="month" style={{ width: "100%" }} />
+        </Space>
+      </Card>
     </div>
   );
 }
