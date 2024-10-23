@@ -14,9 +14,7 @@ function App() {
     <>
       <div>
         <h1>{t('title')}</h1>
-        <Home/>
-
-        <Button
+                <Button
           type="primary"
           style={{
             backgroundColor: theme.palette.primary.main, // Use colorPrimary from theme
@@ -25,6 +23,9 @@ function App() {
         >
           Custom Themed Button
         </Button>
+        <Home/>
+
+
       </div>
     </>
   );
