@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap');
 
 a {
   font-weight: 500;
@@ -28,6 +29,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'lexend', sans-serif; /* Apply the custom font globally */
+
 }
 
 h1 {
@@ -65,4 +68,13 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+}
+
+#root {
+  padding: 24px;
 }
