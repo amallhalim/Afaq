@@ -5,6 +5,9 @@ to run the project :npm run dev
 npm install
 npm run dev
 
+# port
+http://127.0.0.1:5173/
+
 # Build and Test
 
 # Contribute
@@ -20,10 +23,5 @@ Currently, two official plugins are available:
 
 
 
-# run the project
-npm i
-npm run dev
-# port
-http://127.0.0.1:5173/
 
 
