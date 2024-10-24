@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import "./App.css";
 import { Button, ConfigProvider } from "antd";
 import { useTranslation } from "react-i18next";
 import Home from "./pages/home/Home";
