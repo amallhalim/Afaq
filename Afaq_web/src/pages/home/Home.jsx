@@ -3,6 +3,7 @@ import { Cascader, Select, Space, message, Card, Typography, Divider, DatePicker
 import { Option } from "antd/es/mentions";
 import { db } from "../../configuration/firebase"; // Import your Firebase config
 import { collection, addDoc } from "firebase/firestore"; // Firestore methods
+import { Counter } from "./Counter";
 
 const { RangePicker } = DatePicker;
 
@@ -32,6 +33,8 @@ export default function Home() {
 
   return (
     <div style={{ padding: "20px" }}>
+      
+      <Counter/>
       <Card title="User Information" bordered={false} style={{ width: 400 }}>
         <Typography.Title level={4}>Select a User</Typography.Title>
         <Select

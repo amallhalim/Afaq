@@ -10,6 +10,8 @@ import "./configuration/i18next.js";
 
 import App from "./App.jsx";
 import LanguageToggle from "./componant/header/LanguageToggle.jsx";
+import { store } from "./redux/store.js"
+import { Provider } from 'react-redux'
 
 import "./index.css";
 const Main = () => {
@@ -37,8 +39,10 @@ const Main = () => {
           />
           <Button onClick={toggleTheme}>Switch to {isDarkMode ? "Light" : "Dark"} Mode</Button>
         </div>
+  <Provider store={store}>
 
-        <App />
+        <App />  </Provider>,
+
       </ConfigProvider>
     </StrictMode>
   );
