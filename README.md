@@ -1,5 +1,4 @@
-# Introduction 
-to run the project :npm run dev
+# React + Vite
 
 # Getting Started
 npm install
@@ -8,7 +7,7 @@ npm run dev
 # port
 http://127.0.0.1:5173/
 
-# Build and Test
+Currently, two official plugins are available:
 
 # Contribute
 
