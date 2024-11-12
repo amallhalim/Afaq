@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { Button, ConfigProvider } from "antd";
 import { useTranslation } from "react-i18next";
 import Home from "./pages/home/Home";
 
 function App() {
   const { theme } = useContext(ConfigProvider.ConfigContext); // Access the theme values
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
 
 
