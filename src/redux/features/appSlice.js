@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   value: 0,
-  themeMode :"light"
+  themeMode: "light",
+  systemLang:"en"
 }
 
 export const appSlice = createSlice({
@@ -14,13 +15,16 @@ export const appSlice = createSlice({
     },
     toggleThemeMode: (state) => {
       state.themeMode = state.themeMode === "dark" ? "light" : "dark";
-    }
-
+    },
+      changeSystemLang: (state,action) => {
+        state.systemLang = action.payload.systemLang,
+        state.langDirection =action.payload.langDirection
+  }
    
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment,toggleThemeMode} = appSlice.actions
+export const { increment,toggleThemeMode,changeSystemLang} = appSlice.actions
 
 export default appSlice.reducer
