@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Cascader, Select, Space, message, Card, Typography, Divider, DatePicker } from "antd";
+import { Cascader, Select, Space, message, Card, Typography, Divider, DatePicker, Button } from "antd";
 import { Option } from "antd/es/mentions";
 import { db } from "../../configuration/firebase"; // Import your Firebase config
 import { collection, addDoc } from "firebase/firestore"; // Firestore methods
 import { Counter } from "./Counter";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleThemeMode } from "../../redux/features/appSlice";
 
 const { RangePicker } = DatePicker;
 
@@ -30,11 +32,20 @@ export default function Home() {
     setSelectedUser(value);
     saveUserToFirestore(value); // Save to Firestore
   };
+  const dispatch = useDispatch()
+  const ReduxThemeMode = useSelector((state) => state.app.themeMode )
+    const toggleTheme = () => {
+      dispatch(toggleThemeMode(ReduxThemeMode))
+    };
+  
+  
+  
 
   return (
     <div style={{ padding: "20px" }}>
-      
-      <Counter/>
+         <Button onClick={toggleTheme}>Switch to {ReduxThemeMode} Mode</Button>
+
+      <Counter />
       <Card title="User Information" bordered={false} style={{ width: 400 }}>
         <Typography.Title level={4}>Select a User</Typography.Title>
         <Select
