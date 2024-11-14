@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeSystemLang } from '../../redux/features/appSlice';
 
-const LanguageToggle = () => {
+const LanguageToggle= () => {
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
 

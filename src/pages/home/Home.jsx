@@ -15,13 +15,19 @@ import {Option} from "antd/es/mentions";
 import {db} from "../../configuration/firebase"; 
 import {collection, addDoc} from "firebase/firestore";
 import {toggleThemeMode} from "../../redux/features/appSlice";
-import LanguageToggle from "../../componant/header/LanguageToggle";
+import { useTranslation } from "react-i18next";
+import useDynamicTheme from "../../theme/useDynamicTheme";
+import LanguageToggle from "../../components/header/LanguageToggle";
+
+
 
 const {RangePicker} = DatePicker;
 
 export default function Home() {
   const [selectedUser, setSelectedUser] = useState("");
-
+  const { t } = useTranslation();
+  const theme = useDynamicTheme()
+  
   const saveUserToFirestore = async userName => {
     try {
       await addDoc(collection(db, "test"), {
@@ -48,10 +54,19 @@ export default function Home() {
   return (
     <div style={{padding: "20px"}}>
       <div style={{padding: "20px"}}>
-        <LanguageToggle />
+        <LanguageToggle/>
         <Button onClick={toggleTheme}>Switch to {ReduxThemeMode} Mode</Button>
       </div>
-
+        <h1>{t('title')}</h1>
+                <Button
+          type="primary"
+          style={{
+            backgroundColor: theme.palette.primary.main,
+            borderRadius: theme.palette.borderRadius, 
+          }}
+        >
+          Custom Themed Button
+        </Button>
       <Card title="User Information" bordered={false} style={{width: 400}}>
         <Typography.Title level={4}>Select a User</Typography.Title>
         <Select
