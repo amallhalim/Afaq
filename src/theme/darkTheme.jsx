@@ -1,8 +1,9 @@
-import {antdTheme } from "antd";
+import { theme as antdTheme } from "antd"; // Import `theme` and rename it to `antdTheme` to avoid naming conflicts
 
 const theme = {
   fontFamily: "'lexend', sans-serif",
-  algorithm: antdTheme.defaultAlgorithm,
+  algorithm: antdTheme.defaultAlgorithm, // Use `antdTheme.defaultAlgorithm` here
+
   token: {
    primary: {
       main: "#172B4D",

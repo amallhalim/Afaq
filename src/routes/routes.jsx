@@ -19,7 +19,7 @@ const routes = [
         path: "/",
         element: <Home />
       },
-            {
+        {
         path: "profile",
         element: <Profile/>
       },
@@ -43,10 +43,7 @@ const routes = [
             path: "preferences/:id",
             element: <Preferences />,
           },
-             {
-            path: ":home",
-            element: <Home />, 
-          },
+             
         ],
       },
     ],

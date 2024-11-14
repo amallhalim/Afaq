@@ -61,8 +61,8 @@ export default function Home() {
                 <Button
           type="primary"
           style={{
-            backgroundColor: theme.palette.primary.main,
-            borderRadius: theme.palette.borderRadius, 
+            backgroundColor: theme.token.primary.main,
+            borderRadius: theme.token.borderRadius, 
           }}
         >
           Custom Themed Button
