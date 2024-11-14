@@ -52,7 +52,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{padding: "20px"}}>
+    <div style={{ padding: "20px" }}>
       <div style={{padding: "20px"}}>
         <LanguageToggle/>
         <Button onClick={toggleTheme}>Switch to {ReduxThemeMode} Mode</Button>

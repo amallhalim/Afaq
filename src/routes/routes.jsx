@@ -2,9 +2,10 @@
 import App from "../App";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Home from "../pages/home/Home";
-import Preferences from "../pages/home/setting/Preferences";
-import Profile from "../pages/home/setting/Profile";
-import Setting from "../pages/home/setting/Setting";
+import Profile from "../pages/profile/Profile";
+import Preferences from "../pages/setting/Preferences";
+import Setting from "../pages/setting/Setting";
+
 import ProtectedRoute from "./ProtectedRoute";
 
 const routes = [
@@ -15,8 +16,12 @@ const routes = [
 
     children: [
       {
-        path: "home",
+        path: "/",
         element: <Home />
+      },
+            {
+        path: "profile",
+        element: <Profile/>
       },
       {
         path: "c",
@@ -35,12 +40,12 @@ const routes = [
 		 ),
         children: [
           {
-            path: "profile",
-            element: <Profile />, // Nested route under Setting
+            path: "preferences/:id",
+            element: <Preferences />,
           },
-          {
-            path: "preferences",
-            element: <Preferences />, // Nested route under Setting
+             {
+            path: ":home",
+            element: <Home />, 
           },
         ],
       },
