@@ -23,7 +23,7 @@ const Main = () => {
   );
 };
 
-// Render the app to the root element
+// Create and render the root only once
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <StrictMode>
@@ -31,5 +31,3 @@ createRoot(document.getElementById("root")).render(
     </StrictMode>
   </Provider>
 );
-
-export default Main;

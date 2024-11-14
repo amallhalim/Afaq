@@ -1,6 +1,7 @@
 // src/routes/routes.jsx
 import App from "../App";
 import Home from "../pages/home/Home";
+import Setting from "../pages/home/setting/Setting";
 
 const routes = [
   {
@@ -18,6 +19,10 @@ const routes = [
       {
         path: "hello",
         element: <div>Hello world!</div>,
+		},
+	    {
+        path: "Setting",
+        element: <Setting/>,
       },
     ],
   }
