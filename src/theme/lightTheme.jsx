@@ -1,5 +1,9 @@
+import {antdTheme } from "antd";
+
 const theme = {
-  palette: {
+    fontFamily: "'lexend', sans-serif",
+  algorithm: antdTheme.defaultAlgorithm,
+  token: {
    primary: {
       main: "#3EC5FA",
       babyBlue: "#8AD8FA",         
@@ -26,7 +30,7 @@ const theme = {
     border: {
       light: "#F6F7FB",
       gray: "#E5E7E8",
-      grayTransparent: "#EEEEEE7A",    // Clarified name
+      grayTransparent: "#EEEEEE7A", 
     },
     gray: {
       gray1: "#EEEEEE",
@@ -34,6 +38,5 @@ const theme = {
       gray3: "#F6F7F9",
     },
   },
-    fontFamily: "'lexend', sans-serif",  // Add custom font family here
 }
 export default theme
