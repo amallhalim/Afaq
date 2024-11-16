@@ -8,6 +8,15 @@ npm run dev
 http://127.0.0.1:5173/
 
 Currently, two official plugins are available:
+for first time make the release 
+ firebase inti   >> hosting >>> make sure to add dist instead of public when use vite
+
+npm run build
+
+firebase deploy --only hosting
+
+firebase projects:list  to show all project
+
 
 # Contribute
 
