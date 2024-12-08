@@ -3,19 +3,24 @@ import { theme as antdTheme } from "antd"; // Import `theme` and rename it to `a
 const theme = {
   fontFamily: "'lexend', sans-serif",
   algorithm: antdTheme.defaultAlgorithm, // Use `antdTheme.defaultAlgorithm` here
-
   token: {
-   primary: {
-      main: "#172B4D",
-      babyBlue: "#8AD8FA",         
-
+    primary: {
+      100: "#EEEEEE",
+      500: "#495974",
+      900: "#0A1A24",
     },
     secondary: {
-      main: "#172B4D",
+      100: "#EEEEEE",
+      500: "#495974",
+      900: "#0A1A24",
     },
     customColors: {
-      black: "#000000",             
-  
+      black: "#000000",
+      red: {
+        100: "#EEEEEE",
+        500: "#495974",
+        900: "#0A1A24",
+      }
     },
     Dark: {
       darkGray1: "#495974",
@@ -30,13 +35,12 @@ const theme = {
     },
     border: {
       light: "#F6F7FB",
-      gray: "#E5E7E8",
-      grayTransparent: "#EEEEEE7A", 
+      medium: "#E5E7E8",
     },
     gray: {
-      gray1: "#EEEEEE",
-      gray2: "#F4F4F4",
-      gray3: "#F6F7F9",
+      100: "#EEEEEE",
+      500: "#495974",
+      900: "#0A1A24",
     },
   },
 }
