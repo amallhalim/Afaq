@@ -5,14 +5,14 @@ const theme = {
   algorithm: antdTheme.defaultAlgorithm, // Use theme.defaultAlgorithm or theme.darkAlgorithm as needed
   token: {
     primary: {
-      main: "#3EC5FA",
-      babyBlue: "#8AD8FA",
+      100: "#3EC5FA",
+      200: "#8AD8FA",
     },
     secondary: {
-      main: "#172B4D",
+      100: "#172B4D",
     },
     customColors: {
-      black: "#000000",
+      black:{100: "#000000"},
     },
     Dark: {
       darkGray1: "#495974",
@@ -26,14 +26,12 @@ const theme = {
       graniteGray: "#626262",
     },
     border: {
-      light: "#F6F7FB",
-      gray: "#E5E7E8",
-      grayTransparent: "#EEEEEE7A",
+      gray: {100:"#E5E7E8",200:"#E5E7E8",300:"#E5E7E8"}
     },
     gray: {
-      gray1: "#EEEEEE",
-      gray2: "#F4F4F4",
-      gray3: "#F6F7F9",
+      100: "#EEEEEE",
+      200: "#F4F4F4",
+      300: "#F6F7F9",
     },
   },
 };
